@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--File Name: index.ejs Student's Name: Evgueni Antysferov StudentID: 301324790 Date: June, 09, 2023-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><%= title %></title>
+<link rel="stylesheet" href="style.css"/>
+<link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css"/>
+<style>
+ul.navbar-nav {
+list-style: none; /* Remove the bullet */
+display: inline; /* Display the list items inline */
+float:right;
+font-size:20px
+}
+ul.navbar-nav li {
+display: inline-block; /* Make the list items display inline */
+}
+a:link {
+
+text-decoration: none;
+}
+a:visited {
+text-decoration: none;
+}
+a:hover {
+text-decoration: none;
+}
+a:active {
+text-decoration: none;
+}
+html,
+body {
+height: 100%;
+margin: 0;
+}
+body {
+display: flex;
+flex-direction: column;
+}
+main {
+flex: 1;
+}
+footer {
+background-color: #343a40;
+color: #ffffff;
+padding: 10px;
+}
+footer .navbar-text {
+margin-bottom: 0;
+}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container-fluid">
+<img src="/img/logo.png" alt="logo" style: width="150px"; height="100px">
+<a class="navbar-brand" href="#">COMP229</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-
+target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-max mr-auto mb-2 mb-lg-0" >
+<li class="nav-item">
+<a class="nav-link active" href="/">Home</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/about">About</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/contact">Contact</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/products">Product</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/services">Services</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<h1>Welcome to <%= title %> page</h1>
+<script src="/jquery/dist/jquery.min.js"></script>
+<script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+    <img src="/img/logo.png" alt="logo" style: width="150px"; height="100px">
+    <a class="navbar-brand" href="#">COMP229</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-
+    target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-
+    expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <b>
+    <ul class="navbar-max mr-auto mb-2 mb-lg-0" >
+    <% if (title=="Home"){%>
+    <li class="nav-item active">
+    <%}else{%>
+    <li class="nav-item">
+    <%}%>
+    <a class="nav-link" href="/"><i class="fas fa-lg fa-laptop-house"></i>Home</a>
+    </li>
+    <% if (title=="About"){%>
+    <li class="nav-item active">
+    <%}else{%>
+    <li class="nav-item">
+    <%}%>
+    <a class="nav-link" href="/about"><i class="fa-solid fa-address-card"></i>About</a>
+    </li>
+    <% if (title=="Contact"){%>
+    <li class="nav-item active">
+    <%}else{%>
+    <li class="nav-item">
+    <%}%>
+    <a class="nav-link" href="/contact"><i class="fa-solid fa-address-book"></i>Contact</a>
+    </li>
+    <% if (title=="Product"){%>
+    <li class="nav-item active">
+    <%}else{%>
+    <li class="nav-item">
+    <%}%>
+    <a class="nav-link" href="/products"><i class="fa-brands
+    fa-product-hunt"></i>Product</a>
+    </li>
+    <% if (title=="Services"){%>
+    <li class="nav-item active">
+    <%}else{%>
+    <li class="nav-item">
+    <%}%>
+    <a class="nav-link" href="/services"><i class="fa-brands fa-servicestack"></i>Services</a>
+    </li>
+    </ul>
+    </div>
+    </div>
+    </nav>
+    <main class=”container”>
+    <div class=”jumbotron”>
+    <h1 class=”display-4”>Welcome to <%= title %> page</h1>
+    </div>
+    </main>
+    <script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
